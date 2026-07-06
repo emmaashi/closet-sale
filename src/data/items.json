@@ -91,7 +91,7 @@
       "condition": "Great",
       "retail": 115,
       "price": 45,
-      "status": "available",
+      "status": "sold",
       "posted": "2026-07-06",
       "description": "The North Face backpack in black. Padded laptop sleeve, plenty of storage, comfy padded straps. Great everyday/commute or travel pack.",
       "photos": [
@@ -290,7 +290,7 @@
       "condition": "Like New",
       "retail": 70,
       "price": 30,
-      "status": "available",
+      "status": "sold",
       "description": "Full-length wavy bubble wood floor mirror. Leans against the wall — makes a gorgeous statement piece and great for outfit pics. Barely used.",
       "photos": [
         "mirror.jpg"
