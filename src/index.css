@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
+@import "@fontsource/manrope/800.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Manrope", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --color-bg: #f6f4f0;
+  --color-surface: #ffffff;
+  --color-ink: #1b1a17;
+  --color-muted: #8a857c;
+  --color-line: #e7e3db;
+  --color-frame: #eeeae3;
+  --color-sold: #b23b2e;
+  --color-link: #2563eb;
+
+  /* shadcn tokens mapped to the shop palette */
+  --radius: 0.5rem;
+  --background: var(--color-bg);
+  --foreground: var(--color-ink);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-ink);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-ink);
+  --primary: #1b1a17;
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-frame);
+  --secondary-foreground: var(--color-ink);
+  --muted-color: var(--color-frame);
+  --muted-foreground: var(--color-muted);
+  --accent: var(--color-frame);
+  --accent-foreground: var(--color-ink);
+  --border: var(--color-line);
+  --input: var(--color-line);
+  --ring: #b8b1a5;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.005em;
+  }
+  /* hide scrollbar utility for the mobile filter strip */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

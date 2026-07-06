@@ -1,0 +1,300 @@
+{
+  "shop": {
+    "title": "Emma's Closet Sale",
+    "tagline": "Gently used & priced to move.",
+    "channel": "#dd-craigslist",
+    "handle": "@Emma Shi",
+    "categories": [
+      "Clothes",
+      "Shoes",
+      "Furniture",
+      "Miscellaneous"
+    ]
+  },
+  "items": [
+    {
+      "id": 7,
+      "name": "Nike Air Max 270",
+      "brand": "Black / Orange",
+      "category": "Shoes",
+      "condition": "Great",
+      "retail": 130,
+      "price": 35,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "Nike Air Max 270 in black with the orange air unit. Size 6Y (women's 7.5). Gently worn, plenty of life left.",
+      "photos": [
+        "am270_1.jpg",
+        "am270_2.jpg",
+        "am270_3.jpg"
+      ],
+      "size": "6Y · 7.5W",
+      "link": "https://www.nike.com/t/air-max-270-big-kids-shoes-YxxnWM3F/943345-047"
+    },
+    {
+      "id": 18,
+      "name": "Aritzia Sweatfleece Mega Raglan Hoodie",
+      "brand": "Cozy Fleece · Dark Grey · fits oversized",
+      "category": "Clothes",
+      "condition": "Like Brand New",
+      "retail": 95,
+      "price": 65,
+      "status": "available",
+      "posted": "2026-07-06",
+      "size": "Small",
+      "description": "Aritzia Cozy Sweatfleece Mega Raglan™ Hoodie in dark grey. Size Small but fits very oversized. Ultra-soft cozy fleece. Like brand new.",
+      "photos": [
+        "hoodie_1.jpg",
+        "hoodie_2.jpg"
+      ],
+      "link": "https://www.aritzia.com/us/en/product/cozy-sweatfleece-mega-raglan%E2%84%A2-hoodie/116266.html?color=35912"
+    },
+    {
+      "id": 9,
+      "name": "Nike Dunk High 'Grey'",
+      "brand": "Grey / White · Worn twice",
+      "category": "Shoes",
+      "condition": "Like Brand New",
+      "retail": 150,
+      "price": 60,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "Nike Dunk High in grey/white with vintage cream soles. Women's 7.5. Brand new — comes with the box.",
+      "photos": [
+        "dunkhigh_1.jpg",
+        "dunkhigh_2.jpg"
+      ],
+      "size": "7.5W"
+    },
+    {
+      "id": 19,
+      "name": "Logitech Zone Vibe 100 Headphones",
+      "brand": "Still in box, brand new, never used before",
+      "category": "Miscellaneous",
+      "condition": "Brand New, Unused with Box",
+      "retail": 100,
+      "price": 50,
+      "status": "available",
+      "posted": "2026-07-06",
+      "link": "https://www.logitech.com/en-us/shop/p/zone-vibe-100-wireless",
+      "description": "Logitech Zone Vibe 100 wireless headphones in graphite. Brand new — never opened, still sealed. Lightweight with a noise-canceling mic.",
+      "photos": [
+        "headphones.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Borealis Backpack - 28L",
+      "brand": "The North Face · Black",
+      "category": "Miscellaneous",
+      "condition": "Great",
+      "retail": 115,
+      "price": 45,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "The North Face backpack in black. Padded laptop sleeve, plenty of storage, comfy padded straps. Great everyday/commute or travel pack.",
+      "photos": [
+        "northface_1.jpg",
+        "northface_2.jpg"
+      ],
+      "link": "https://www.thenorthface.com/en-us/p/bags-and-gear/backpacks/mens-backpacks-298772/borealis-backpack-28l-NF0A52SE?color=4HF&size=OS"
+    },
+    {
+      "id": 8,
+      "name": "Nike Dunk Low 'Panda'",
+      "brand": "Black / White",
+      "category": "Shoes",
+      "condition": "Good",
+      "retail": 120,
+      "price": 50,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "Classic Nike Dunk Low 'Panda' in black/white. Women's 7.5. Pre-owned and still in great shape.",
+      "photos": [
+        "panda_1.jpg",
+        "panda_2.jpg",
+        "panda_box.jpg"
+      ],
+      "size": "7.5W"
+    },
+    {
+      "id": 20,
+      "name": "Lululemon Relaxed HR Cargo Short 4.5\"",
+      "brand": "Cassis · high-rise · never worn, tags attached",
+      "category": "Clothes",
+      "condition": "New with Tags",
+      "retail": 88,
+      "price": 35,
+      "status": "available",
+      "posted": "2026-07-06",
+      "size": "8 (M)",
+      "link": "http://lulufanatics.com/item/74244/lululemon-relaxed-high-rise-cargo-short-4-5-cassis",
+      "description": "Lululemon Relaxed High-Rise Cargo Short 4.5\" in Cassis. Travel Woven™ fabric, size 8. Brand new, never worn — tags still attached.",
+      "photos": [
+        "lulushorts_1.jpg",
+        "lulushorts_2.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Aritzia Sunday Best Crop Top — Black",
+      "brand": "Sunday Best",
+      "category": "Clothes",
+      "condition": "Like Brand New",
+      "retail": 28,
+      "price": 12,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "Aritzia Sunday Best cropped top in black. Photos coming soon.",
+      "photos": [
+        "croptop_black.jpg",
+        "croptop_black_tag.jpg"
+      ],
+      "size": "Small"
+    },
+    {
+      "id": 11,
+      "name": "Aritzia Sunday Best Crop Top — White",
+      "brand": "Sunday Best",
+      "category": "Clothes",
+      "condition": "Like Brand New",
+      "retail": 28,
+      "price": 12,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "Aritzia Sunday Best cropped top in white. Photos coming soon.",
+      "photos": [
+        "croptop_white.jpg",
+        "croptop_white_tag.jpg"
+      ],
+      "size": "Small"
+    },
+    {
+      "id": 15,
+      "name": "Black Cropped Long Sleeve",
+      "brand": "Square neck",
+      "category": "Clothes",
+      "condition": "Like Brand New",
+      "price": 10,
+      "status": "available",
+      "posted": "2026-07-06",
+      "size": "Small",
+      "description": "Black cropped long-sleeve top with a square neckline. Size small. Great layering piece.",
+      "photos": [
+        "blacklongsleeve.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Moose Knuckles Ballistic Bomber",
+      "brand": "Men's Large · fits 5'8\"–6'1\" · Shearling trim · Black",
+      "category": "Clothes",
+      "condition": "Great",
+      "retail": 1295,
+      "price": 700,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "Moose Knuckles Original Ballistic Shearling Trim Bomber Jacket in black. Down-filled winter bomber with a shearling-trim hood. Men's Large — fits roughly 5'8\"–6'1\". Retails $1295 — selling for a fraction.",
+      "photos": [
+        "mooseknuckles_1.jpg",
+        "mooseknuckles_2.jpg"
+      ],
+      "size": "Men's L",
+      "link": "https://www.mooseknucklescanada.com/en-us/products/original-ballistic-shearling-trim-bomber-jacket-m35mb000s-305?oc=US"
+    },
+    {
+      "id": 12,
+      "name": "Poker Set",
+      "brand": "",
+      "category": "Miscellaneous",
+      "condition": "Brand New",
+      "retail": 45,
+      "price": 20,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "",
+      "photos": [
+        "poker_2.jpg",
+        "poker_1.jpg"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "3 Gallon Rimless Betta Tank 😂",
+      "brand": "Halfmoon female betta · incl. filter, LED lights, net, flakes & floating plants",
+      "category": "Miscellaneous",
+      "condition": "Perfect",
+      "price": 45,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "3-gallon rimless tank with a halfmoon female betta. Comes with everything: internal filter, LED lights, the fish, a fish net, fish flakes, and floating plants. 😂",
+      "photos": [
+        "tank_1.jpg",
+        "tank_2.jpg",
+        "tank_3.jpg",
+        "tank_4.jpg"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Bouclé Accent Chair",
+      "brand": "Rounded lounge, wood legs",
+      "category": "Furniture",
+      "condition": "Like New",
+      "price": 150,
+      "retail": 500,
+      "status": "available",
+      "description": "Cozy rounded bouclé lounge chair with solid wood legs. Barely used — no stains, no pilling. Super comfortable reading/accent chair. Throw blanket not included.",
+      "photos": [
+        "IMG_0434.jpg",
+        "IMG_0433.jpg",
+        "IMG_0435.jpg"
+      ],
+      "posted": "2026-06-29"
+    },
+    {
+      "id": 17,
+      "name": "Decor Pot & Vase",
+      "brand": "Green vase + white scalloped dish",
+      "category": "Miscellaneous",
+      "condition": "Good",
+      "price": 12,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "Glossy green ceramic vase paired with a white scalloped dish. Lovely shelf or console decor — sold together as a set.",
+      "photos": [
+        "decorvase.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Decor Books (Set of 6)",
+      "brand": "Coffee-table / styling books",
+      "category": "Miscellaneous",
+      "condition": "Great",
+      "retail": 175,
+      "price": 40,
+      "status": "available",
+      "posted": "2026-07-06",
+      "description": "Set of 6 decor/coffee-table books — Made for Living (Amber Lewis), The Curated Home, Style Comfort Home, The Louvre, Mindful Places to Stay, and The Complete Traveler's Guide to Italy. Perfect for styling shelves. Retails ~$175 for the set.",
+      "photos": [
+        "decorbooks.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Frame Floor Mirror",
+      "brand": "Wavy bubble wood frame · full-length",
+      "category": "Furniture",
+      "condition": "Like New",
+      "retail": 70,
+      "price": 30,
+      "status": "available",
+      "description": "Full-length wavy bubble wood floor mirror. Leans against the wall — makes a gorgeous statement piece and great for outfit pics. Barely used.",
+      "photos": [
+        "mirror.jpg"
+      ],
+      "posted": "2026-07-01"
+    }
+  ]
+}
