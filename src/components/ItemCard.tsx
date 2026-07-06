@@ -1,14 +1,24 @@
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Item } from "@/data/types";
 import { Badge } from "@/components/ui/badge";
 import { cn, money, fmtDate, photoUrl } from "@/lib/utils";
 
 type Props = { item: Item; index?: number; onOpen: () => void };
 
-export function ItemCard({ item, index = 0, onOpen }: Props) {
+export function ItemCard({ item, onOpen }: Props) {
   const sold = item.status === "sold";
+  const n = item.photos.length;
+  const [pi, setPi] = useState(0);
   const [contain, setContain] = useState(false);
+
+  const go = (e: React.MouseEvent, d: number) => {
+    e.stopPropagation();
+    setPi((p) => (p + d + n) % n);
+  };
+
+  const navBtn =
+    "absolute top-1/2 z-10 flex size-7 -translate-y-1/2 items-center justify-center rounded-full bg-black/45 text-white opacity-0 backdrop-blur-sm transition hover:bg-black/65 group-hover:opacity-100 cursor-pointer";
 
   return (
     <div
@@ -29,7 +39,7 @@ export function ItemCard({ item, index = 0, onOpen }: Props) {
     >
       <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-[var(--color-frame)] shadow-[0_1px_2px_rgba(27,26,23,.04),0_6px_18px_rgba(27,26,23,.05)]">
         <img
-          src={photoUrl(item.photos[0])}
+          src={photoUrl(item.photos[pi])}
           alt={item.name}
           loading="lazy"
           onLoad={(e) => setContain(e.currentTarget.naturalWidth > e.currentTarget.naturalHeight)}
@@ -49,10 +59,18 @@ export function ItemCard({ item, index = 0, onOpen }: Props) {
             {item.size}
           </Badge>
         )}
-        {item.photos.length > 1 && (
-          <Badge variant="counter" size="sm" className="absolute bottom-2.5 right-2.5">
-            1 / {item.photos.length}
-          </Badge>
+        {n > 1 && (
+          <>
+            <button className={cn(navBtn, "left-2")} onClick={(e) => go(e, -1)} aria-label="Previous photo">
+              <ChevronLeft className="size-4" />
+            </button>
+            <button className={cn(navBtn, "right-2")} onClick={(e) => go(e, 1)} aria-label="Next photo">
+              <ChevronRight className="size-4" />
+            </button>
+            <Badge variant="counter" size="sm" className="absolute bottom-2.5 right-2.5">
+              {pi + 1} / {n}
+            </Badge>
+          </>
         )}
         {sold && (
           <div className="absolute inset-0 flex items-center justify-center">
