@@ -74,9 +74,11 @@ export function ItemCard({ item, onOpen }: Props) {
         )}
         {sold && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="-rotate-6 rounded border-[3px] border-[var(--color-sold)] bg-white/90 px-5 py-2 text-lg font-extrabold uppercase tracking-[0.2em] text-[var(--color-sold)] shadow-xl">
-              Sold
-            </span>
+            <div className="rounded-md bg-[var(--color-sold)] p-[3px] shadow-lg">
+              <span className="block rounded-[5px] border-2 border-white px-4 py-1 text-base font-extrabold uppercase tracking-wider text-white">
+                Sold
+              </span>
+            </div>
           </div>
         )}
       </div>
