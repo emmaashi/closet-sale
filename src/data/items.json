@@ -13,6 +13,60 @@
   },
   "items": [
     {
+      "id": 22,
+      "name": "Aritzia Wilfred Allant Pants",
+      "brand": "Wilfred · Light grey · Brand new with tags",
+      "category": "Clothes",
+      "condition": "New with Tags",
+      "retail": 128,
+      "price": 50,
+      "status": "available",
+      "visible": true,
+      "order": 1,
+      "posted": "2026-08-03",
+      "size": "10",
+      "description": "Aritzia Wilfred Allant Pants in light grey. Size 10. Brand new with tags. Retails for $128.",
+      "photos": [
+        "wilfred_allant_pants_1.png",
+        "wilfred_allant_pants_2.jpg"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Aritzia Babaton Jumpsuit",
+      "brand": "Babaton · Light grey · Brand new with tags",
+      "category": "Clothes",
+      "condition": "New with Tags",
+      "retail": 138,
+      "price": 50,
+      "status": "available",
+      "visible": true,
+      "order": 2,
+      "posted": "2026-08-03",
+      "size": "M",
+      "description": "Aritzia Babaton jumpsuit in light grey. Size medium. Brand new with tags, with a wrap-style neckline, tie waist, and wide legs.",
+      "photos": [
+        "babaton_jumpsuit_1.png",
+        "babaton_jumpsuit_2.jpg"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "AirPods Max (1st Generation)",
+      "brand": "Apple · Midnight",
+      "category": "Miscellaneous",
+      "condition": "Perfect",
+      "price": 275,
+      "status": "available",
+      "visible": true,
+      "order": 3,
+      "posted": "2026-08-03",
+      "description": "Apple AirPods Max (1st generation) in Midnight. In perfect condition.",
+      "photos": [
+        "airpods_max_midnight.png"
+      ]
+    },
+    {
       "id": 7,
       "name": "Nike Air Max 270",
       "brand": "Black / Orange",
@@ -21,6 +75,7 @@
       "retail": 130,
       "price": 35,
       "status": "available",
+      "visible": false,
       "posted": "2026-07-06",
       "description": "Nike Air Max 270 in black with the orange air unit. Size 6Y (women's 7.5). Gently worn, plenty of life left.",
       "photos": [
@@ -40,6 +95,7 @@
       "retail": 95,
       "price": 65,
       "status": "available",
+      "visible": false,
       "posted": "2026-07-06",
       "size": "Small",
       "description": "Aritzia Cozy Sweatfleece Mega Raglan™ Hoodie in dark grey. Tagged size Small but fits oversized — more like a medium/large. Ultra-soft cozy fleece. Like brand new.",
@@ -58,6 +114,7 @@
       "retail": 150,
       "price": 60,
       "status": "available",
+      "visible": false,
       "posted": "2026-07-06",
       "description": "Nike Dunk High in grey/white with vintage cream soles. Women's 7.5. Brand new — comes with the box.",
       "photos": [
@@ -75,6 +132,7 @@
       "retail": 100,
       "price": 50,
       "status": "available",
+      "visible": false,
       "posted": "2026-07-06",
       "link": "https://www.logitech.com/en-us/shop/p/zone-vibe-100-wireless",
       "description": "Logitech Zone Vibe 100 wireless headphones in graphite. Brand new — never opened, still sealed. Lightweight with a noise-canceling mic.",
@@ -92,6 +150,7 @@
       "retail": 115,
       "price": 45,
       "status": "sold",
+      "visible": false,
       "posted": "2026-07-06",
       "description": "The North Face backpack in black. Padded laptop sleeve, plenty of storage, comfy padded straps. Great everyday/commute or travel pack.",
       "photos": [
@@ -109,6 +168,7 @@
       "retail": 120,
       "price": 50,
       "status": "available",
+      "visible": false,
       "posted": "2026-07-06",
       "description": "Classic Nike Dunk Low 'Panda' in black/white. Women's 7.5. Pre-owned and still in great shape.",
       "photos": [
@@ -127,6 +187,7 @@
       "retail": 88,
       "price": 35,
       "status": "sold",
+      "visible": false,
       "posted": "2026-07-06",
       "size": "8 (M)",
       "link": "http://lulufanatics.com/item/74244/lululemon-relaxed-high-rise-cargo-short-4-5-cassis",
@@ -145,6 +206,7 @@
       "retail": 28,
       "price": 12,
       "status": "sold",
+      "visible": false,
       "posted": "2026-07-06",
       "description": "Aritzia Sunday Best cropped top in black. Photos coming soon.",
       "photos": [
@@ -162,6 +224,7 @@
       "retail": 28,
       "price": 12,
       "status": "sold",
+      "visible": false,
       "posted": "2026-07-06",
       "description": "Aritzia Sunday Best cropped top in white. Photos coming soon.",
       "photos": [
@@ -176,8 +239,10 @@
       "brand": "Square neck",
       "category": "Clothes",
       "condition": "Like Brand New",
-      "price": 10,
+      "price": 8,
       "status": "available",
+      "visible": true,
+      "order": 4,
       "posted": "2026-07-06",
       "size": "Small",
       "description": "Black cropped long-sleeve top with a square neckline. Size small. Great layering piece.",
@@ -194,6 +259,7 @@
       "retail": 1295,
       "price": 700,
       "status": "available",
+      "visible": false,
       "posted": "2026-07-06",
       "description": "Moose Knuckles Original Ballistic Shearling Trim Bomber Jacket in black. Down-filled winter bomber with a shearling-trim hood. Men's Large — fits roughly 5'8\"–6'1\". Retails $1295 — selling for a fraction.",
       "photos": [
@@ -212,6 +278,7 @@
       "retail": 45,
       "price": 20,
       "status": "sold",
+      "visible": false,
       "posted": "2026-07-06",
       "description": "",
       "photos": [
@@ -227,6 +294,8 @@
       "condition": "Perfect",
       "price": 45,
       "status": "available",
+      "visible": true,
+      "order": 8,
       "posted": "2026-07-06",
       "description": "3-gallon rimless tank with a halfmoon female betta. Comes with everything: internal filter, LED lights, the fish, a fish net, fish flakes, and floating plants. 😂",
       "photos": [
@@ -245,6 +314,8 @@
       "price": 150,
       "retail": 500,
       "status": "available",
+      "visible": true,
+      "order": 9,
       "description": "Cozy rounded bouclé lounge chair with solid wood legs. Barely used — no stains, no pilling. Super comfortable reading/accent chair. Throw blanket not included.",
       "photos": [
         "IMG_0434.jpg",
@@ -259,8 +330,10 @@
       "brand": "Green vase + white scalloped dish",
       "category": "Miscellaneous",
       "condition": "Good",
-      "price": 12,
+      "price": 10,
       "status": "available",
+      "visible": true,
+      "order": 6,
       "posted": "2026-07-06",
       "description": "Glossy green ceramic vase paired with a white scalloped dish. Lovely shelf or console decor — sold together as a set.",
       "photos": [
@@ -274,8 +347,10 @@
       "category": "Miscellaneous",
       "condition": "Great",
       "retail": 175,
-      "price": 40,
+      "price": 20,
       "status": "available",
+      "visible": true,
+      "order": 7,
       "posted": "2026-07-06",
       "description": "Set of 6 decor/coffee-table books — Made for Living (Amber Lewis), The Curated Home, Style Comfort Home, The Louvre, Mindful Places to Stay, and The Complete Traveler's Guide to Italy. Perfect for styling shelves. Retails ~$175 for the set.",
       "photos": [
@@ -289,8 +364,10 @@
       "category": "Furniture",
       "condition": "Like New",
       "retail": 70,
-      "price": 30,
-      "status": "sold",
+      "price": 25,
+      "status": "available",
+      "visible": true,
+      "order": 5,
       "description": "Full-length wavy bubble wood floor mirror. Leans against the wall — makes a gorgeous statement piece and great for outfit pics. Barely used.",
       "photos": [
         "mirror.jpg"

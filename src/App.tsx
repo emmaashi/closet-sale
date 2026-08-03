@@ -15,17 +15,20 @@ export default function App() {
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
-    return items.filter((it) => {
-      if (activeCat !== "All" && it.category !== activeCat) return false;
-      if (q) {
-        const hay = [it.name, it.brand, it.category, it.condition, it.size, it.description]
-          .filter(Boolean)
-          .join(" ")
-          .toLowerCase();
-        if (!hay.includes(q)) return false;
-      }
-      return true;
-    });
+    return items
+      .filter((it) => {
+        if (it.visible === false) return false;
+        if (activeCat !== "All" && it.category !== activeCat) return false;
+        if (q) {
+          const hay = [it.name, it.brand, it.category, it.condition, it.size, it.description]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      })
+      .sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
   }, [activeCat, query]);
 
   return (
