@@ -7,6 +7,8 @@ export type Item = {
   retail?: number;
   price: number;
   status: "available" | "sold";
+  visible?: boolean;
+  order?: number;
   posted?: string;
   description?: string;
   size?: string;
