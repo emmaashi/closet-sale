@@ -52,7 +52,7 @@
     -webkit-font-smoothing: antialiased;
     letter-spacing: 0.005em;
   }
-  /* hide scrollbar utility for the mobile filter strip */
+  /* hide scrollbars without disabling horizontal scrolling */
   .no-scrollbar {
     scrollbar-width: none;
   }

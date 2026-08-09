@@ -63,6 +63,7 @@
       "order": 2,
       "posted": "2026-08-08",
       "description": "Glow Recipe Watermelon Glow Dew Balm SPF 45 with niacinamide. 16.5 g / 0.58 oz.",
+      "link": "https://www.glowrecipe.com/products/watermelon-glow-dew-balm-spf-45",
       "photos": [
         "glow_recipe_dew_balm.png"
       ]
@@ -89,10 +90,10 @@
       "brand": "Nourish + Protect",
       "category": "Beauty",
       "condition": "Unopened",
-      "price": 3,
+      "price": 0,
       "status": "available",
       "visible": true,
-      "order": 6,
+      "order": 11,
       "posted": "2026-08-08",
       "description": "Wellness Collective hydrating lip balm for soft, healthy lips. Unopened.",
       "photos": [
@@ -142,7 +143,7 @@
       "visible": true,
       "order": 3,
       "posted": "2026-08-03",
-      "description": "Apple AirPods Max (1st generation) in Midnight. In perfect condition.",
+      "description": "Apple AirPods Max (1st generation) in Midnight. In perfect condition. The only difference from Gen 2 is that it does not have Adaptive Mode.",
       "photos": [
         "airpods_max_midnight.png"
       ]
@@ -359,7 +360,7 @@
       "price": 8,
       "status": "available",
       "visible": true,
-      "order": 11,
+      "order": 6,
       "posted": "2026-07-06",
       "size": "Small",
       "description": "Black cropped long-sleeve top with a square neckline. Size small. Great layering piece.",

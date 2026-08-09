@@ -4,7 +4,7 @@ import type { Item } from "@/data/types";
 import { Badge } from "@/components/ui/badge";
 import { cn, money, photoUrl } from "@/lib/utils";
 
-type Props = { item: Item; index?: number; onOpen: () => void };
+type Props = { item: Item; onOpen: () => void };
 
 export function ItemCard({ item, onOpen }: Props) {
   const sold = item.status === "sold";
@@ -80,8 +80,7 @@ export function ItemCard({ item, onOpen }: Props) {
       </div>
 
       <div className="pt-3.5">
-        <p className="mb-0.5 text-sm font-semibold text-[var(--color-ink)]">{item.name}</p>
-        {item.brand && <p className="mb-2 text-xs leading-snug text-[var(--color-muted)]">{item.brand}</p>}
+        <p className="mb-2 text-sm font-semibold text-[var(--color-ink)]">{item.name}</p>
         <p className="flex items-baseline gap-2 text-[17px]">
           {item.retail && (
             <span className="text-sm font-normal text-[var(--color-muted)] line-through">{money(item.retail)}</span>
