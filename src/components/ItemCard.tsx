@@ -58,7 +58,7 @@ export function ItemCard({ item, currency, onOpen }: Props) {
           }}
           onError={markPhotoLoaded}
           className={cn(
-            "h-full w-full transition-[opacity,transform] duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transform-none motion-reduce:transition-none",
+            "h-full w-full transition-[opacity,transform] duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.015] motion-reduce:transform-none motion-reduce:transition-none",
             contain ? "object-contain" : "object-cover",
             sold && "grayscale brightness-95",
             photoLoaded ? (sold ? "opacity-80" : "opacity-100") : "opacity-0"
