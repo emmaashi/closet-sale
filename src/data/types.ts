@@ -11,6 +11,7 @@ export type Item = {
   order?: number;
   posted?: string;
   description?: string;
+  cardDescription?: string;
   size?: string;
   link?: string;
   photos: string[];

@@ -26,6 +26,7 @@
       "posted": "2026-08-03",
       "size": "10",
       "description": "Aritzia Wilfred Allant Pants in light grey. Size 10. Brand new with tags. Retails for $128.",
+      "cardDescription": "Size 10",
       "photos": [
         "wilfred_allant_pants_1.png",
         "wilfred_allant_pants_2.jpg"
@@ -45,6 +46,7 @@
       "posted": "2026-08-03",
       "size": "M",
       "description": "Aritzia Babaton jumpsuit in light grey. Size medium. Brand new with tags, with a wrap-style neckline, tie waist, and wide legs.",
+      "cardDescription": "Size medium",
       "photos": [
         "babaton_jumpsuit_1.png",
         "babaton_jumpsuit_2.jpg"
@@ -143,7 +145,8 @@
       "visible": true,
       "order": 3,
       "posted": "2026-08-03",
-      "description": "Apple AirPods Max (1st generation) in Midnight. In perfect condition. The only difference from Gen 2 is that it does not have Adaptive Mode.",
+      "description": "Apple AirPods Max (1st generation) in Midnight. In perfect condition. Only difference with Gen 2 is that there is no Adaptive Mode.",
+      "cardDescription": "Only difference with Gen 2 is that there is no Adaptive Mode.",
       "photos": [
         "airpods_max_midnight.png"
       ]
@@ -364,6 +367,7 @@
       "posted": "2026-07-06",
       "size": "Small",
       "description": "Black cropped long-sleeve top with a square neckline. Size small. Great layering piece.",
+      "cardDescription": "Size small",
       "photos": [
         "blacklongsleeve.jpg"
       ]

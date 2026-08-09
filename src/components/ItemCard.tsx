@@ -80,29 +80,34 @@ export function ItemCard({ item, onOpen }: Props) {
       </div>
 
       <div className="pt-3.5">
-        <p className="mb-2 text-sm font-semibold text-[var(--color-ink)]">{item.name}</p>
-        <p className="flex items-baseline gap-2 text-[17px]">
-          {item.retail && (
-            <span className="text-sm font-normal text-[var(--color-muted)] line-through">{money(item.retail)}</span>
-          )}
-          <span className={cn("font-semibold", sold && "text-[var(--color-sold)]")}>
-            {sold ? "Sold" : money(item.price)}
-          </span>
+        <p className={`${item.cardDescription ? "mb-0.5" : "mb-2.5"} text-sm font-medium leading-snug text-[var(--color-ink)]`}>
+          {item.name}
         </p>
-        {item.link && (
-          <p className="mt-1.5 flex flex-wrap items-baseline gap-2.5">
+        {item.cardDescription && (
+          <p className="mb-2.5 text-xs leading-snug text-[var(--color-muted)]">{item.cardDescription}</p>
+        )}
+        <div className="flex items-baseline justify-between gap-3">
+          <p className="flex min-w-0 items-baseline gap-2 text-[18px] font-bold tracking-[-0.02em]">
+            {item.retail && (
+              <span className="text-sm font-normal tracking-normal text-[var(--color-muted)] line-through">
+                {money(item.retail)}
+              </span>
+            )}
+            <span className={cn(sold && "text-[var(--color-sold)]")}>{sold ? "Sold" : money(item.price)}</span>
+          </p>
+          {item.link && (
             <a
               href={item.link}
               target="_blank"
               rel="noopener"
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-0.5 text-xs font-medium text-[var(--color-link)] underline underline-offset-2 hover:text-[#1749b5]"
+              className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--color-link)] underline underline-offset-2 hover:text-[#1749b5]"
             >
               View original
               <ArrowUpRight className="size-3.5" strokeWidth={2.25} />
             </a>
-          </p>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

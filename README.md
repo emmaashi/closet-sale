@@ -35,6 +35,7 @@ Common optional fields:
 
 - `retail`: shows the original price with a strikethrough
 - `condition`: shows a badge over the image
+- `cardDescription`: shows a short detail beneath the product name, such as `Size 10`
 - `size`: shows a size badge
 - `link`: adds a “View original” link
 - `order`: controls the default listing order
