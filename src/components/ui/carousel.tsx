@@ -1,6 +1,7 @@
 import * as React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ImageSkeleton } from "@/components/ui/image-skeleton";
 import { cn } from "@/lib/utils";
 
 type CarouselContextProps = {
@@ -122,18 +123,33 @@ function CarouselThumbs({ photos }: { photos: string[] }) {
   return (
     <div className="flex-none flex justify-center gap-2 overflow-x-auto px-1 pt-2.5 no-scrollbar">
       {photos.map((p, i) => (
-        <button
-          key={i}
-          onClick={() => scrollTo(i)}
-          className={cn(
-            "h-16 w-[52px] flex-none overflow-hidden rounded-[3px] outline outline-2 transition-opacity duration-150 motion-reduce:transition-none",
-            i === selectedIndex ? "opacity-100 outline-white" : "opacity-50 outline-transparent hover:opacity-80"
-          )}
-        >
-          <img src={p} alt="" className="h-full w-full object-cover" />
-        </button>
+        <CarouselThumbnail key={i} src={p} selected={i === selectedIndex} onClick={() => scrollTo(i)} />
       ))}
     </div>
+  );
+}
+
+function CarouselThumbnail({ src, selected, onClick }: { src: string; selected: boolean; onClick: () => void }) {
+  const [loaded, setLoaded] = React.useState(false);
+
+  return (
+    <button
+      onClick={onClick}
+      className={cn(
+        "relative h-16 w-[52px] flex-none overflow-hidden rounded-[3px] outline outline-2 transition-opacity duration-150 motion-reduce:transition-none",
+        selected ? "opacity-100 outline-white" : "opacity-50 outline-transparent hover:opacity-80"
+      )}
+    >
+      {!loaded && <ImageSkeleton dark className="absolute inset-0" />}
+      <img
+        src={src}
+        alt=""
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)}
+        className={cn("h-full w-full object-cover transition-opacity duration-200", loaded ? "opacity-100" : "opacity-0")}
+      />
+    </button>
   );
 }
 
