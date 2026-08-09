@@ -19,7 +19,7 @@ const ToggleGroupItem = React.forwardRef<
   <ToggleGroupPrimitive.Item
     ref={ref}
     className={cn(
-      "cursor-pointer whitespace-nowrap rounded-md px-3.5 py-1.5 text-sm font-medium text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)] data-[state=on]:bg-[var(--color-ink)] data-[state=on]:text-white",
+      "cursor-pointer whitespace-nowrap rounded-md px-3.5 py-1.5 text-sm font-medium text-[var(--color-muted)] transition-colors duration-150 hover:text-[var(--color-ink)] motion-reduce:transition-none data-[state=on]:bg-[var(--color-ink)] data-[state=on]:text-white",
       className
     )}
     {...props}
