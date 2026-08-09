@@ -6,5 +6,10 @@ type Props = {
 };
 
 export function ImageSkeleton({ className, dark = false }: Props) {
-  return <div aria-hidden="true" className={cn("image-skeleton pointer-events-none", dark && "image-skeleton-dark", className)} />;
+  return (
+    <div
+      aria-hidden="true"
+      className={cn("image-skeleton relative pointer-events-none", dark && "image-skeleton-dark", className)}
+    />
+  );
 }

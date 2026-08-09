@@ -106,7 +106,7 @@
       "condition": "Unopened",
       "price": 7,
       "status": "available",
-      "visible": true,
+      "visible": false,
       "order": 8,
       "photos": [
         "touchland_beach_coco_power_mist.png"

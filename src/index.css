@@ -67,24 +67,14 @@
 
 .image-skeleton {
   overflow: hidden;
-  background: #e8e3da;
-}
-
-.image-skeleton::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  transform: translateX(-100%);
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.48), transparent);
-  animation: image-skeleton-shimmer 1.35s ease-in-out infinite;
+  background: linear-gradient(90deg, #d5d5d3 25%, #eeeeec 50%, #d5d5d3 75%);
+  background-size: 200% 100%;
+  animation: image-skeleton-shimmer 1.6s linear infinite;
 }
 
 .image-skeleton-dark {
-  background: #252525;
-}
-
-.image-skeleton-dark::after {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(90deg, #202020 25%, #333333 50%, #202020 75%);
+  background-size: 200% 100%;
 }
 
 ::view-transition-old(listings) {
@@ -110,8 +100,11 @@
 }
 
 @keyframes image-skeleton-shimmer {
+  from {
+    background-position: 200% 0;
+  }
   to {
-    transform: translateX(100%);
+    background-position: -200% 0;
   }
 }
 
@@ -120,9 +113,8 @@
   ::view-transition-new(listings) {
     animation: none;
   }
-  .image-skeleton::after {
+  .image-skeleton {
     animation: none;
-    transform: none;
-    opacity: 0.35;
+    background-position: 50% 0;
   }
 }
