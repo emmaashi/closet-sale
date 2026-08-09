@@ -156,14 +156,14 @@
       "name": "Apple Magic Keyboard with Touch ID and Numeric Keypad",
       "brand": "Black keys · Apple silicon Macs",
       "category": "Tech",
-      "condition": "In Box",
+      "condition": "Unopened in Box",
       "retail": 199,
       "price": 80,
       "status": "available",
       "visible": true,
       "order": 9,
       "posted": "2026-08-08",
-      "description": "Apple Magic Keyboard with Touch ID and Numeric Keypad in the black-key finish. Wireless and rechargeable, with the original box.",
+      "description": "Apple Magic Keyboard with Touch ID and Numeric Keypad in the black-key finish. Wireless and rechargeable. Unopened in the original box.",
       "photos": [
         "apple_magic_keyboard_touch_id.png"
       ],
@@ -174,14 +174,14 @@
       "name": "Apple Magic Mouse — Black",
       "brand": "Black Multi-Touch Surface",
       "category": "Tech",
-      "condition": "In Box",
+      "condition": "Unopened in Box",
       "retail": 99,
       "price": 50,
       "status": "available",
       "visible": true,
       "order": 10,
       "posted": "2026-08-08",
-      "description": "Apple Magic Mouse with a black Multi-Touch surface. Wireless and rechargeable, with the original box.",
+      "description": "Apple Magic Mouse with a black Multi-Touch surface. Wireless and rechargeable. Unopened in the original box.",
       "photos": [
         "apple_magic_mouse_black.png"
       ],
