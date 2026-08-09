@@ -23,7 +23,7 @@ export function Lightbox({ item, onClose }: Props) {
           <DialogTitle className="sr-only">{item.name}</DialogTitle>
 
           <DialogClose
-            className="fixed right-5 top-5 z-50 flex size-10 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition hover:bg-black/60"
+            className="fixed right-5 top-5 z-50 flex size-10 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors duration-150 hover:bg-black/60 motion-reduce:transition-none"
             aria-label="Close"
           >
             <X className="size-5" />
@@ -70,7 +70,7 @@ function ZoomImage({ src, alt }: { src: string; alt: string }) {
       }}
       style={{ transformOrigin: origin }}
       className={
-        "max-h-full max-w-full select-none object-contain transition-transform duration-150 " +
+        "max-h-full max-w-full select-none object-contain transition-transform duration-200 ease-out motion-reduce:transition-none " +
         (zoomed ? "scale-[2.6] cursor-zoom-out" : "cursor-zoom-in")
       }
     />

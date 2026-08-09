@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Item } from "@/data/types";
 import { Badge } from "@/components/ui/badge";
-import { cn, money, fmtDate, photoUrl } from "@/lib/utils";
+import { cn, money, photoUrl } from "@/lib/utils";
 
 type Props = { item: Item; index?: number; onOpen: () => void };
 
@@ -18,7 +18,7 @@ export function ItemCard({ item, onOpen }: Props) {
   };
 
   const navBtn =
-    "absolute top-1/2 z-10 flex size-7 -translate-y-1/2 items-center justify-center rounded-full bg-black/45 text-white opacity-0 backdrop-blur-sm transition hover:bg-black/65 group-hover:opacity-100 cursor-pointer";
+    "absolute top-1/2 z-10 flex size-7 -translate-y-1/2 items-center justify-center rounded-full bg-black/45 text-white opacity-0 backdrop-blur-sm transition-[opacity,background-color] duration-150 ease-out hover:bg-black/65 group-hover:opacity-100 motion-reduce:transition-none cursor-pointer";
 
   return (
     <div
@@ -31,11 +31,7 @@ export function ItemCard({ item, onOpen }: Props) {
           onOpen();
         }
       }}
-      className={cn(
-        "group flex cursor-pointer flex-col text-left",
-        "animate-in fade-in-0 duration-[450ms] ease-out",
-        sold && "opacity-95"
-      )}
+      className={cn("group flex cursor-pointer flex-col text-left", sold && "opacity-95")}
     >
       <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-[var(--color-frame)] shadow-[0_1px_2px_rgba(27,26,23,.04),0_6px_18px_rgba(27,26,23,.05)]">
         <img
@@ -44,7 +40,7 @@ export function ItemCard({ item, onOpen }: Props) {
           loading="lazy"
           onLoad={(e) => setContain(e.currentTarget.naturalWidth > e.currentTarget.naturalHeight)}
           className={cn(
-            "h-full w-full transition-transform duration-500 ease-out group-hover:scale-[1.035]",
+            "h-full w-full transition-transform duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transform-none motion-reduce:transition-none",
             contain ? "object-contain" : "object-cover",
             sold && "grayscale brightness-95 opacity-80"
           )}
@@ -94,23 +90,18 @@ export function ItemCard({ item, onOpen }: Props) {
             {sold ? "Sold" : money(item.price)}
           </span>
         </p>
-        {(item.posted || item.link) && (
+        {item.link && (
           <p className="mt-1.5 flex flex-wrap items-baseline gap-2.5">
-            {item.posted && (
-              <span className="text-[11.5px] text-[var(--color-muted)]">Posted {fmtDate(item.posted)}</span>
-            )}
-            {item.link && (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener"
-                onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center gap-0.5 text-xs font-medium text-[var(--color-link)] underline underline-offset-2 hover:text-[#1749b5]"
-              >
-                View original
-                <ArrowUpRight className="size-3.5" strokeWidth={2.25} />
-              </a>
-            )}
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-0.5 text-xs font-medium text-[var(--color-link)] underline underline-offset-2 hover:text-[#1749b5]"
+            >
+              View original
+              <ArrowUpRight className="size-3.5" strokeWidth={2.25} />
+            </a>
           </p>
         )}
       </div>

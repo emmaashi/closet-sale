@@ -23,7 +23,7 @@ function useCarousel() {
 }
 
 function Carousel({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  const [carouselRef, api] = useEmblaCarousel({ loop: false });
+  const [carouselRef, api] = useEmblaCarousel({ loop: false, duration: 18 });
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [count, setCount] = React.useState(0);
   const [canPrev, setCanPrev] = React.useState(false);
@@ -84,7 +84,7 @@ function CarouselItem({ className, ...props }: React.HTMLAttributes<HTMLDivEleme
 }
 
 const navBtn =
-  "absolute top-1/2 z-20 flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition hover:bg-black/60 disabled:pointer-events-none disabled:opacity-25 cursor-pointer";
+  "absolute top-1/2 z-20 flex size-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors duration-150 hover:bg-black/60 motion-reduce:transition-none disabled:pointer-events-none disabled:opacity-25 cursor-pointer";
 
 function CarouselPrevious() {
   const { scrollPrev, canPrev, count } = useCarousel();
@@ -126,7 +126,7 @@ function CarouselThumbs({ photos }: { photos: string[] }) {
           key={i}
           onClick={() => scrollTo(i)}
           className={cn(
-            "h-16 w-[52px] flex-none overflow-hidden rounded-[3px] outline outline-2 transition-opacity",
+            "h-16 w-[52px] flex-none overflow-hidden rounded-[3px] outline outline-2 transition-opacity duration-150 motion-reduce:transition-none",
             i === selectedIndex ? "opacity-100 outline-white" : "opacity-50 outline-transparent hover:opacity-80"
           )}
         >
