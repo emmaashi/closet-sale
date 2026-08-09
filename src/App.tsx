@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { flushSync } from "react-dom";
 import { CatalogControls } from "@/components/CatalogControls";
 import { Footer } from "@/components/Footer";
@@ -35,6 +35,10 @@ export default function App() {
   const categories = useMemo(() => getCatalogCategories(items, shop.categories), [items, shop.categories]);
   const displayedItems = useMemo(() => getCatalogItems(items, { category, sort }), [items, category, sort]);
 
+  useEffect(() => {
+    document.title = shop.title;
+  }, [shop.title]);
+
   const changeCategory = (nextCategory: string) => {
     if (nextCategory !== category) updateCatalogView(() => setCategory(nextCategory));
   };
@@ -64,14 +68,14 @@ export default function App() {
           ) : (
             <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-6 xl:grid-cols-4">
               {displayedItems.map((item) => (
-                <ItemCard key={item.id} item={item} onOpen={() => setOpenItem(item)} />
+                <ItemCard key={item.id} item={item} currency={shop.currency} onOpen={() => setOpenItem(item)} />
               ))}
             </div>
           )}
         </section>
       </main>
 
-      <Footer shop={shop} />
+      <Footer text={shop.footer} />
       <Lightbox item={openItem} onClose={() => setOpenItem(null)} />
     </div>
   );

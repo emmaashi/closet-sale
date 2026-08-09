@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { ImageSkeleton } from "@/components/ui/image-skeleton";
 import { cn, money, photoUrl } from "@/lib/utils";
 
-type Props = { item: Item; onOpen: () => void };
+type Props = { item: Item; currency: string; onOpen: () => void };
 
-export function ItemCard({ item, onOpen }: Props) {
+export function ItemCard({ item, currency, onOpen }: Props) {
   const sold = item.status === "sold";
   const n = item.photos.length;
   const [pi, setPi] = useState(0);
@@ -109,10 +109,10 @@ export function ItemCard({ item, onOpen }: Props) {
           <p className="flex min-w-0 items-baseline gap-2 text-[18px] font-bold tracking-[-0.02em]">
             {item.retail && (
               <span className="text-sm font-normal tracking-normal text-[var(--color-muted)] line-through">
-                {money(item.retail)}
+                {money(item.retail, currency)}
               </span>
             )}
-            <span className={cn(sold && "text-[var(--color-sold)]")}>{sold ? "Sold" : money(item.price)}</span>
+            <span className={cn(sold && "text-[var(--color-sold)]")}>{sold ? "Sold" : money(item.price, currency)}</span>
           </p>
           {item.link && (
             <a

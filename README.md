@@ -42,7 +42,14 @@ Common optional fields:
 - `visible`: set to `false` to keep an old item in the source without showing it
 - `status`: use `sold` to display the sold treatment, or `available` for a normal listing
 
-The `shop` section at the top of `items.json` controls the store name, contact handle, and preferred category order. Any product category missing from that list is appended automatically.
+The `shop` section at the top of `items.json` controls:
+
+- `title`: the browser-tab title
+- `currency`: the three-letter currency code used for prices, such as `USD` or `CAD`
+- `footer`: the contact message shown at the bottom of the catalog
+- `categories`: the preferred filter order; any additional product category is appended automatically
+
+The catalog validates required fields, duplicate IDs, prices, and photo lists when the app starts. Invalid entries produce a focused error that points to the listing that needs attention.
 
 ## Sorting behavior
 

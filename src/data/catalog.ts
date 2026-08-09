@@ -1,11 +1,15 @@
 import catalogData from "@/data/items.json";
 import type { Catalog, Item } from "@/data/types";
+import { validateCatalog } from "@/data/validateCatalog";
 
 export const ALL_CATEGORIES = "All";
 
 export type SortMode = "featured" | "price-asc" | "price-desc";
 
-export const catalog = catalogData as Catalog;
+const rawCatalog: unknown = catalogData;
+validateCatalog(rawCatalog);
+
+export const catalog: Catalog = rawCatalog;
 
 export function getCatalogCategories(items: Item[], preferred: string[] = []) {
   const available = new Set(
