@@ -6,7 +6,7 @@ export type Item = {
   condition?: string;
   retail?: number;
   price: number;
-  status: "available" | "sold";
+  status?: "available" | "sold";
   visible?: boolean;
   order?: number;
   posted?: string;
@@ -21,7 +21,7 @@ export type Shop = {
   tagline: string;
   channel: string;
   handle: string;
-  categories: string[];
+  categories?: string[];
 };
 
 export type Catalog = { shop: Shop; items: Item[] };

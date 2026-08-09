@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const money = (n: number) => "$" + n.toLocaleString();
+export const money = (n: number) => (n === 0 ? "Free" : "$" + n.toLocaleString());
 
 /** Vite base-aware asset URL for a photo filename in /public/photos. */
 export function photoUrl(file: string) {
