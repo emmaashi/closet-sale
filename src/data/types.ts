@@ -1,7 +1,6 @@
 export type Item = {
   id: number;
   name: string;
-  brand?: string;
   category: string;
   condition?: string;
   retail?: number;
@@ -9,8 +8,6 @@ export type Item = {
   status?: "available" | "sold";
   visible?: boolean;
   order?: number;
-  posted?: string;
-  description?: string;
   cardDescription?: string;
   size?: string;
   link?: string;
@@ -19,9 +16,8 @@ export type Item = {
 
 export type Shop = {
   title: string;
-  tagline: string;
-  channel: string;
-  handle: string;
+  currency: string;
+  footer: string;
   categories?: string[];
 };
 

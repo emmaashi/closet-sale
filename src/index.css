@@ -65,6 +65,28 @@
   view-transition-name: listings;
 }
 
+.image-skeleton {
+  overflow: hidden;
+  background: #e8e3da;
+}
+
+.image-skeleton::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.48), transparent);
+  animation: image-skeleton-shimmer 1.35s ease-in-out infinite;
+}
+
+.image-skeleton-dark {
+  background: #252525;
+}
+
+.image-skeleton-dark::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
 ::view-transition-old(listings) {
   animation: listings-out 150ms ease-in both;
 }
@@ -87,9 +109,20 @@
   }
 }
 
+@keyframes image-skeleton-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(listings),
   ::view-transition-new(listings) {
     animation: none;
+  }
+  .image-skeleton::after {
+    animation: none;
+    transform: none;
+    opacity: 0.35;
   }
 }

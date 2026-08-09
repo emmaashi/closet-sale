@@ -2,15 +2,28 @@ import { useState } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Item } from "@/data/types";
 import { Badge } from "@/components/ui/badge";
+import { ImageSkeleton } from "@/components/ui/image-skeleton";
 import { cn, money, photoUrl } from "@/lib/utils";
 
-type Props = { item: Item; onOpen: () => void };
+type Props = { item: Item; currency: string; onOpen: () => void };
 
-export function ItemCard({ item, onOpen }: Props) {
+export function ItemCard({ item, currency, onOpen }: Props) {
   const sold = item.status === "sold";
   const n = item.photos.length;
   const [pi, setPi] = useState(0);
   const [contain, setContain] = useState(false);
+  const [loadedPhotos, setLoadedPhotos] = useState<Set<string>>(() => new Set());
+  const currentPhoto = item.photos[pi];
+  const photoLoaded = loadedPhotos.has(currentPhoto);
+
+  const markPhotoLoaded = () => {
+    setLoadedPhotos((loaded) => {
+      if (loaded.has(currentPhoto)) return loaded;
+      const next = new Set(loaded);
+      next.add(currentPhoto);
+      return next;
+    });
+  };
 
   const go = (e: React.MouseEvent, d: number) => {
     e.stopPropagation();
@@ -34,15 +47,21 @@ export function ItemCard({ item, onOpen }: Props) {
       className={cn("group flex cursor-pointer flex-col text-left", sold && "opacity-95")}
     >
       <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-[var(--color-frame)] shadow-[0_1px_2px_rgba(27,26,23,.04),0_6px_18px_rgba(27,26,23,.05)]">
+        {!photoLoaded && <ImageSkeleton className="absolute inset-0" />}
         <img
-          src={photoUrl(item.photos[pi])}
+          src={photoUrl(currentPhoto)}
           alt={item.name}
           loading="lazy"
-          onLoad={(e) => setContain(e.currentTarget.naturalWidth > e.currentTarget.naturalHeight)}
+          onLoad={(e) => {
+            setContain(e.currentTarget.naturalWidth > e.currentTarget.naturalHeight);
+            markPhotoLoaded();
+          }}
+          onError={markPhotoLoaded}
           className={cn(
-            "h-full w-full transition-transform duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transform-none motion-reduce:transition-none",
+            "h-full w-full transition-[opacity,transform] duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transform-none motion-reduce:transition-none",
             contain ? "object-contain" : "object-cover",
-            sold && "grayscale brightness-95 opacity-80"
+            sold && "grayscale brightness-95",
+            photoLoaded ? (sold ? "opacity-80" : "opacity-100") : "opacity-0"
           )}
         />
         {item.condition && (
@@ -90,10 +109,10 @@ export function ItemCard({ item, onOpen }: Props) {
           <p className="flex min-w-0 items-baseline gap-2 text-[18px] font-bold tracking-[-0.02em]">
             {item.retail && (
               <span className="text-sm font-normal tracking-normal text-[var(--color-muted)] line-through">
-                {money(item.retail)}
+                {money(item.retail, currency)}
               </span>
             )}
-            <span className={cn(sold && "text-[var(--color-sold)]")}>{sold ? "Sold" : money(item.price)}</span>
+            <span className={cn(sold && "text-[var(--color-sold)]")}>{sold ? "Sold" : money(item.price, currency)}</span>
           </p>
           {item.link && (
             <a

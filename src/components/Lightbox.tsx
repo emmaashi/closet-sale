@@ -11,6 +11,7 @@ import {
   CarouselCounter,
   CarouselThumbs,
 } from "@/components/ui/carousel";
+import { ImageSkeleton } from "@/components/ui/image-skeleton";
 import { photoUrl } from "@/lib/utils";
 
 type Props = { item: Item | null; onClose: () => void };
@@ -53,26 +54,33 @@ export function Lightbox({ item, onClose }: Props) {
 function ZoomImage({ src, alt }: { src: string; alt: string }) {
   const [zoomed, setZoomed] = useState(false);
   const [origin, setOrigin] = useState("center center");
+  const [loaded, setLoaded] = useState(false);
   return (
-    <img
-      src={src}
-      alt={alt}
-      draggable={false}
-      onClick={(e) => {
-        e.stopPropagation();
-        setZoomed((z) => !z);
-        if (zoomed) setOrigin("center center");
-      }}
-      onMouseMove={(e) => {
-        if (!zoomed) return;
-        const r = e.currentTarget.getBoundingClientRect();
-        setOrigin(`${((e.clientX - r.left) / r.width) * 100}% ${((e.clientY - r.top) / r.height) * 100}%`);
-      }}
-      style={{ transformOrigin: origin }}
-      className={
-        "max-h-full max-w-full select-none object-contain transition-transform duration-200 ease-out motion-reduce:transition-none " +
-        (zoomed ? "scale-[2.6] cursor-zoom-out" : "cursor-zoom-in")
-      }
-    />
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+      {!loaded && <ImageSkeleton dark className="absolute inset-0" />}
+      <img
+        src={src}
+        alt={alt}
+        draggable={false}
+        onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)}
+        onClick={(e) => {
+          e.stopPropagation();
+          setZoomed((z) => !z);
+          if (zoomed) setOrigin("center center");
+        }}
+        onMouseMove={(e) => {
+          if (!zoomed) return;
+          const r = e.currentTarget.getBoundingClientRect();
+          setOrigin(`${((e.clientX - r.left) / r.width) * 100}% ${((e.clientY - r.top) / r.height) * 100}%`);
+        }}
+        style={{ transformOrigin: origin }}
+        className={
+          "max-h-full max-w-full select-none object-contain transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none " +
+          (loaded ? "opacity-100 " : "opacity-0 ") +
+          (zoomed ? "scale-[2.6] cursor-zoom-out" : "cursor-zoom-in")
+        }
+      />
+    </div>
   );
 }
