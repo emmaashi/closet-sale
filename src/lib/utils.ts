@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function money(value: number, currency = "USD") {
   if (value === 0) return "Free";
 
-  return new Intl.NumberFormat(undefined, {
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency,
     minimumFractionDigits: 0,

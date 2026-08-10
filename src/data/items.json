@@ -51,7 +51,7 @@
       "category": "Beauty",
       "condition": "Unopened",
       "retail": 30,
-      "price": 13,
+      "price": 14,
       "status": "available",
       "visible": true,
       "order": 2,
@@ -65,10 +65,11 @@
       "name": "Winnie Harlow Cay Skin Isle Lip Balm SPF 30 — Clear",
       "category": "Beauty",
       "condition": "Unopened",
-      "price": 10,
+      "price": 9,
       "status": "available",
       "visible": true,
       "order": 4,
+      "link": "https://cayskin.com/products/isle-lip-balm-spf-30-clear",
       "photos": [
         "cay_skin_isle_lip_balm.png"
       ]
@@ -78,7 +79,7 @@
       "name": "Wellness Collective Lip Balm",
       "category": "Beauty",
       "condition": "Unopened",
-      "price": 0,
+      "price": 2,
       "status": "available",
       "visible": true,
       "order": 11,
@@ -104,9 +105,9 @@
       "name": "Touchland Beach Coco Power Mist",
       "category": "Beauty",
       "condition": "Unopened",
-      "price": 7,
+      "price": 6,
       "status": "available",
-      "visible": false,
+      "visible": true,
       "order": 8,
       "photos": [
         "touchland_beach_coco_power_mist.png"
@@ -121,7 +122,7 @@
       "status": "available",
       "visible": true,
       "order": 3,
-      "cardDescription": "Only difference with Gen 2 is that there is no Adaptive Mode.",
+      "cardDescription": "Worn <5 times, only different with gen 2 is adaptive mode",
       "photos": [
         "airpods_max_midnight.png"
       ]
@@ -132,7 +133,7 @@
       "category": "Tech",
       "condition": "Unopened in Box",
       "retail": 199,
-      "price": 80,
+      "price": 85,
       "status": "available",
       "visible": true,
       "order": 9,
@@ -147,7 +148,7 @@
       "category": "Tech",
       "condition": "Unopened in Box",
       "retail": 99,
-      "price": 50,
+      "price": 45,
       "status": "available",
       "visible": true,
       "order": 10,
@@ -350,7 +351,7 @@
       "status": "available",
       "visible": true,
       "order": 15,
-      "cardDescription": "Just want it to go to a good home!",
+      "cardDescription": "Just want it to go to a good home! Pickup in LES",
       "photos": [
         "tank_1.jpg",
         "tank_2.jpg",
@@ -368,6 +369,7 @@
       "status": "available",
       "visible": true,
       "order": 16,
+      "cardDescription": "Pickup in LES",
       "photos": [
         "IMG_0434.jpg",
         "IMG_0433.jpg",
@@ -376,7 +378,7 @@
     },
     {
       "id": 17,
-      "name": "Decor Pot & Vase",
+      "name": "Decor Plate & Vase",
       "category": "Miscellaneous",
       "price": 10,
       "status": "available",
@@ -410,6 +412,7 @@
       "status": "available",
       "visible": true,
       "order": 12,
+      "cardDescription": "Pickup in LES",
       "photos": [
         "mirror.jpg"
       ]

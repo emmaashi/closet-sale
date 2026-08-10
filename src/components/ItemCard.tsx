@@ -120,10 +120,10 @@ export function ItemCard({ item, currency, onOpen }: Props) {
           {item.cardDescription && (
             <p className="mb-2.5 text-xs leading-snug text-[var(--color-muted)]">{item.cardDescription}</p>
           )}
-          <div className="flex items-baseline justify-between gap-3">
-            <p className="flex min-w-0 items-baseline gap-2 text-[18px] font-bold tracking-[-0.02em]">
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-x-2">
+            <p className="flex min-w-0 flex-wrap items-baseline gap-x-1.5 gap-y-0 text-base font-bold tracking-[-0.02em] sm:gap-x-2 sm:text-[18px]">
               {item.retail && (
-                <span className="text-sm font-normal tracking-normal text-[var(--color-muted)] line-through">
+                <span className="text-xs font-normal tracking-normal text-[var(--color-muted)] line-through sm:text-sm">
                   {money(item.retail, currency)}
                 </span>
               )}
@@ -135,7 +135,7 @@ export function ItemCard({ item, currency, onOpen }: Props) {
                 target="_blank"
                 rel="noopener"
                 onClick={(e) => e.stopPropagation()}
-                className="inline-flex shrink-0 items-center gap-0.5 text-xs font-medium text-[var(--color-link)] underline underline-offset-2 hover:text-[#1749b5]"
+                className="inline-flex shrink-0 items-center gap-0.5 whitespace-nowrap text-[11px] font-medium text-[var(--color-link)] underline underline-offset-2 hover:text-[#1749b5] sm:text-xs"
               >
                 View original
                 <ArrowUpRight className="size-3.5" strokeWidth={2.25} />
