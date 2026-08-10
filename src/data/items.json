@@ -365,11 +365,12 @@
       "category": "Furniture",
       "condition": "Like New",
       "price": 150,
-      "retail": 500,
+      "retail": 400,
       "status": "available",
       "visible": true,
       "order": 16,
       "cardDescription": "Pickup in LES",
+      "link": "https://www.ikea.com/us/en/p/stockholm-2025-armchair-djurmo-gray-white-40594754/",
       "photos": [
         "IMG_0434.jpg",
         "IMG_0433.jpg",
