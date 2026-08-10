@@ -79,3 +79,7 @@ npm run dev
 ## GitHub Pages
 
 The included workflow deploys the site whenever `main` changes. It automatically uses the GitHub repository name as the Pages base path, so the source can be copied into a differently named repository without editing `vite.config.ts`.
+
+## Analytics
+
+Google Analytics is optional and disabled unless a measurement ID is configured. To enable it for GitHub Pages, add a repository Actions variable named `GA_MEASUREMENT_ID` with your `G-XXXXXXXXXX` value. The deployment workflow injects the value during the production build; local development is not tracked.
