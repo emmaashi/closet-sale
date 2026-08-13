@@ -127,7 +127,7 @@ export function ItemCard({ item, currency, onOpen }: Props) {
                   {money(item.retail, currency)}
                 </span>
               )}
-              <span className={cn(sold && "text-[var(--color-sold)]")}>{sold ? "Sold" : money(item.price, currency)}</span>
+              <span>{money(item.price, currency)}</span>
             </p>
             {item.link && (
               <a
