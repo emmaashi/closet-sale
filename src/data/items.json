@@ -302,12 +302,12 @@
       "name": "Black Cropped Long Sleeve",
       "category": "Clothes",
       "condition": "Like Brand New",
-      "price": 5,
+      "price": 4,
       "status": "available",
       "visible": true,
       "order": 6,
       "size": "Small",
-      "cardDescription": "Size small",
+      "cardDescription": "Size small, only worn 1-2 times, a bit too small for me",
       "photos": [
         "blacklongsleeve.jpg"
       ]
@@ -392,7 +392,7 @@
     },
     {
       "id": 16,
-      "name": "Decor Books (Set of 6)",
+      "name": "Books (Set of 6)",
       "category": "Miscellaneous",
       "condition": "Great",
       "retail": 175,
