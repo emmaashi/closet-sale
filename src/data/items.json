@@ -37,7 +37,7 @@
       "price": 45,
       "status": "available",
       "visible": true,
-      "order": 5,
+      "order": 6,
       "size": "M",
       "cardDescription": "Size medium",
       "photos": [
@@ -68,10 +68,25 @@
       "price": 8,
       "status": "sold",
       "visible": true,
-      "order": 4,
+      "order": 5,
       "link": "https://cayskin.com/products/isle-lip-balm-spf-30-clear",
       "photos": [
         "cay_skin_isle_lip_balm.png"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "The Laptop Stand",
+      "category": "Tech",
+      "retail": 50,
+      "price": 15,
+      "status": "available",
+      "visible": true,
+      "order": 4,
+      "link": "https://raindesigninc.com/products/mstand",
+      "photos": [
+        "laptop_stand_1.jpg",
+        "laptop_stand_2.jpg"
       ]
     },
     {
@@ -82,7 +97,7 @@
       "price": 0,
       "status": "sold",
       "visible": true,
-      "order": 11,
+      "order": 12,
       "photos": [
         "wellness_collective_lip_balm.png"
       ]
@@ -95,7 +110,7 @@
       "price": 5,
       "status": "available",
       "visible": true,
-      "order": 7,
+      "order": 8,
       "photos": [
         "wellness_collective_lip_scrub.png"
       ]
@@ -108,7 +123,7 @@
       "price": 6,
       "status": "sold",
       "visible": true,
-      "order": 8,
+      "order": 9,
       "photos": [
         "touchland_beach_coco_power_mist.png"
       ]
@@ -136,7 +151,7 @@
       "price": 80,
       "status": "sold",
       "visible": true,
-      "order": 9,
+      "order": 10,
       "photos": [
         "apple_magic_keyboard_touch_id.png"
       ],
@@ -151,7 +166,7 @@
       "price": 40,
       "status": "available",
       "visible": true,
-      "order": 10,
+      "order": 11,
       "photos": [
         "apple_magic_mouse_black.png"
       ],
@@ -305,7 +320,7 @@
       "price": 4,
       "status": "available",
       "visible": true,
-      "order": 6,
+      "order": 7,
       "size": "Small",
       "cardDescription": "Size small, only worn 1-2 times, a bit too small for me",
       "photos": [
@@ -350,7 +365,7 @@
       "price": 20,
       "status": "sold",
       "visible": true,
-      "order": 15,
+      "order": 16,
       "cardDescription": "Just want it to go to a good home! Pickup in LES",
       "photos": [
         "tank_1.jpg",
@@ -368,7 +383,7 @@
       "retail": 400,
       "status": "available",
       "visible": true,
-      "order": 16,
+      "order": 17,
       "cardDescription": "Pickup in LES",
       "link": "https://www.ikea.com/us/en/p/stockholm-2025-armchair-djurmo-gray-white-40594754/",
       "photos": [
@@ -384,7 +399,7 @@
       "price": 8,
       "status": "available",
       "visible": true,
-      "order": 13,
+      "order": 14,
       "cardDescription": "Can buy separately",
       "photos": [
         "decorvase.jpg"
@@ -399,7 +414,7 @@
       "price": 15,
       "status": "available",
       "visible": true,
-      "order": 14,
+      "order": 15,
       "photos": [
         "decorbooks.jpg"
       ]
@@ -413,7 +428,7 @@
       "price": 25,
       "status": "available",
       "visible": true,
-      "order": 12,
+      "order": 13,
       "cardDescription": "Pickup in LES",
       "photos": [
         "mirror.jpg"
