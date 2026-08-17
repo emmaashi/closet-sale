@@ -27,11 +27,15 @@ export function getCatalogItems(
 ) {
   const featuredOrder = (a: Item, b: Item) =>
     (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER) || a.id - b.id;
+  const availabilityOrder = (a: Item, b: Item) =>
+    Number(a.status === "sold") - Number(b.status === "sold");
 
   return items
     .filter((item) => item.visible !== false)
     .filter((item) => category === ALL_CATEGORIES || item.category === category)
     .sort((a, b) => {
+      const availability = availabilityOrder(a, b);
+      if (availability !== 0) return availability;
       if (sort === "price-asc") return a.price - b.price || featuredOrder(a, b);
       if (sort === "price-desc") return b.price - a.price || featuredOrder(a, b);
       return featuredOrder(a, b);
